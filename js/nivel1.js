@@ -40,13 +40,13 @@
 
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
-
+// alert("Hola mundo!")
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
 
 
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
-
+console.log("probando console.log")
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
@@ -102,7 +102,8 @@
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
-
+let numeroUno;
+let numeroDos;
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
 
@@ -126,7 +127,10 @@
 *
 * */
 
+let miNombre = 'Lucas';
+let miEdad = '21';
 
+// alert(miNombre + miEdad)
 /*
     Constantes
     =========
@@ -149,11 +153,12 @@
 */
 
 // TAREA: Crear una constante y mostrarla con un alert
-
+const HorasEnUnDia = '24';
+//alert(HorasEnUnDia)
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
-
+// HorasEnUnDia = 28;
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
 
@@ -183,6 +188,10 @@
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
+let diez = 10;
+let tres = 3;
+let resultadoMultiplicacion = diez * tres;
+// console.log('🚀 ~ resultadoMultiplicacion', resultadoMultiplicacion);
 
 /*
     Funciones
@@ -239,14 +248,32 @@
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
+function sumar(numero1,numero2){
+  return numero1 + numero2;
+} 
+
+sumar(2,4)
+console.log('🚀 ~ sumar(2,4)', sumar(2,4));
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
+function restar(primerNum,segundoNum){
+  return primerNum - segundoNum;
+}
+
+restar(5,1);
+console.log('🚀 ~ restar(5,1)', restar(5,1));
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
+
+let num1 = 25;
+let num2 = 10;
+
+restar(num1,num2);
+console.log('🚀 ~ restar(num1,num2)', restar(num1,num2));
 
 // Consejo: Dejá las funciones como están, no las comentes, las vamos a usar de nuevo.
 
