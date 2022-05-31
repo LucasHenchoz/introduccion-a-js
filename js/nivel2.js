@@ -42,7 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
+let comidasFavoritas = ['milanesa', 'pizza', 'hamburguesa']
 
 
 
@@ -65,7 +65,7 @@
 // imprimi utilizando console.log el resultado.
 
 
-
+console.log(comidasFavoritas.length)
 
 
 
@@ -90,7 +90,7 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
+console.log(comidasFavoritas[2])
 
 
 
@@ -115,7 +115,7 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
+comidasFavoritas[0] = 'carne';
 
 
 
@@ -123,7 +123,7 @@
 // TAREA: console.log todo el array para verificar.
 
 
-
+console.log(comidasFavoritas)
 
 
 
@@ -147,7 +147,7 @@
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
 
-
+comidasFavoritas.push('tortilla')
 
 
 
@@ -155,7 +155,7 @@
 
 
 
-
+console.log(comidasFavoritas)
 
 
 /*
@@ -182,9 +182,12 @@
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
 
+const nuevoArray = ["hola",1,false]
+console.log(nuevoArray)
 
+nuevoArray[0] = 'maria';
 
-
+console.log(nuevoArray)
 
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
@@ -192,8 +195,10 @@
 //       asigna un nuevo array completamente nuevo a la constante
 
 
+nuevoArray.push('chau');
+nuevoArray[1] = 'mentira';
 
-
+//const nuevoArray = ['a ver', 'q']
 
 
 /*
@@ -246,8 +251,12 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+/* numero = 0;
+while (numero <= 10) {
+  console.log(numero)
 
-
+  numero++
+} */
 
 
 
@@ -268,7 +277,9 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-
+for (let i = 3; i <= 22; i = i + 3) {
+  console.log(i);
+}
 
 
 
@@ -296,7 +307,10 @@
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
-
+for (let i = 0; i < comidasFavoritas.length; i++) {
+  console.log('Me gusta la ' + comidasFavoritas[i])
+}
+  
 
 
 
@@ -331,6 +345,19 @@
 // * Si es un múltiplo de 5, imprime 'Buzz'.
 // * Si es un múltiplo de 3 y 5, imprime 'FizzBuzz'.
 // * Para todo lo demás, imprime el número mismo.
+
+function FizzBuzz(){
+  for (let i = 1; i <= 50 ; i++) {
+    if(i % 5 === 0 && i % 3 === 0){
+      console.log('FizzBuzz')
+    } else if(i % 5 === 0){
+      console.log('Buzz')
+    } else if( i % 3 === 0){
+      console.log('Fizz')
+    }
+  }
+}
+FizzBuzz();
 
 // NOTA: Es posible que desees utilizar el operador aritmético modulo (%):
 // Calcula el resto al dividir.

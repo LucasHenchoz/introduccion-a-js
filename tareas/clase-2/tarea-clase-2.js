@@ -26,19 +26,33 @@ function restar(numero1, numero2) {
     return numero1 - numero2;
 }
 
-const operador = prompt('Ingrese + o -');
-const numero1 = 1;
-const numero2 = 2;
+function multiplicar(numero1,numero2) {
+  return numero1 * numero2;
+}
 
+function dividir(numero1,numero2) {
+  return numero1 / numero2;
+}
+
+
+
+const operador = prompt('Ingrese un operador aritmético (+,-,*,/)');
+const numero1 = Number(prompt('Ingrese un número'));
+const numero2 = Number(prompt('Ingrese otro número'));
 let resultado;
+
 if (operador === '+') {
     resultado = sumar(numero1, numero2);
+} else if (operador === '-') {
+  resultado = restar(numero1,numero2);
+} else if (operador === '*') {
+  resultado = multiplicar(numero1,numero2);
+} else if (operador === '/') {
+  resultado = dividir(numero1,numero2);
 } else {
-    resultado = restar(numero1, numero2);
+  'No estás ingresando un operador aritmético, probá otra vez'
 }
 
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
-console.log(
-    `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
-);
+console.log(`El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`);
 

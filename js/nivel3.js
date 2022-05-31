@@ -125,8 +125,8 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
-
-
+let nuestroTitulo = document.querySelector("h1")
+console.log(nuestroTitulo)
 
 
 /*
@@ -146,7 +146,7 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-
+const mediaLinks = document.querySelectorAll('li')
 
 
 
@@ -154,7 +154,7 @@
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-
+console.log(mediaLinks.length)
 
 
 
@@ -163,7 +163,9 @@
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 
-
+for (let i = 0; i < mediaLinks.length; i++) {
+  console.log(mediaLinks[i])
+}
 
 
 
@@ -186,6 +188,7 @@
 
 
 
+console.log(nuestroTitulo.textContent)
 
 
 
@@ -205,8 +208,7 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
-
+nuestroTitulo.textContent = 'Título cambiado'
 
 
 /*
@@ -224,8 +226,8 @@
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
 
-
-
+const imagen = document.querySelector('img');
+imagen.src = 'img/kittens.jpeg';
 
 
 /*
@@ -248,11 +250,11 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
+const segundoTitulo = document.querySelector('h2')
 
-
-
-
-
+segundoTitulo.style.backgroundColor = 'purple';
+segundoTitulo.style.color = 'brown';
+segundoTitulo.style.backgroundColor = 'black'
 /*
    Creando nuevos nodos (Elementos)
     =============================
@@ -278,8 +280,9 @@
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
-
-
+const nuevaImagen = document.createElement('img');
+nuevaImagen.src = '/introduccion-a-js/img/woman_bw.jpg'
+document.querySelector('header').appendChild(nuevaImagen);
 
 
 
